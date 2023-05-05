@@ -1,0 +1,250 @@
+/*---------- Variables ----------*/
+
+$font-header:  'Times new roman';
+$font-text:   'Raleway', sans-serif;
+
+$color-one: #17daa3;
+$color-two: #576671;
+$color-three: #f9f9fa;
+
+$color-text-light: #ffffff;
+$color-text-light2: #87949e;
+$color-text-dark: #2c2c54;
+
+$transition: all 1s;
+
+/*---------- Global ----------*/
+
+*, *::before, *::after {
+        box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.7;
+    font-family: $font-text;
+    color: $color-text-dark;
+}
+
+.container {
+    max-width: 1400px;
+    height: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.cont-col-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text-light; 
+}
+
+.section-title {
+    font-size: 60px;  
+    color: $color-two;
+    font-weight: 200;
+    margin: 110px auto 0 auto;
+}
+
+.btn {
+    font-weight: 600;
+    color: $color-text-light;
+    display: inline-block;
+    min-width: 183px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 22px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.btn-two {
+    background: #17daa3;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: $color-text-light;
+    background-image: url("../images/header.png") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+    
+}
+    
+.navigation {
+    background: none;
+    width: 100%;
+    margin-top: 5vh;
+    
+    .logo {
+        font-weight: 500;
+        font-size: 32px;
+        span {
+            color: $color-one;
+        }
+    }
+    
+    ul {
+        float: right;
+        margin-bottom: 7px;
+        list-style-type: none;
+    }
+    
+    li {
+        display: inline-block;
+        margin-left: 65px; 
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    color: $color-text-light;
+    
+    h1 {
+        margin: 0 auto;
+        font-size: 60px;
+        font-weight: 100;
+        
+        span {
+            font-weight: 700;
+        }
+    }
+    
+    h2 {
+        margin: 0 auto;
+        font-size: 24px;
+    }
+    
+    a {
+        margin: 57px auto 0 auto;
+    }
+}
+
+/*---------- About ----------*/
+
+.about {
+    h2 {
+        position: relative;
+        margin-bottom: 40px;
+        
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: -10px;
+            left: 50%;
+            width: 30px;
+            height: 1px;
+            transform: translateX(-50%);
+            background: $color-one;
+        }
+    }
+    
+    .container>p {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 auto 150px auto;
+        color: $color-text-light2;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        margin-bottom: 106px;
+        font-size: 0;
+        
+        i {
+            font-size: 53px;
+            margin: 0 auto;
+            background: $color-three;
+            width: 182px;
+            height: 182px;
+            line-height: 182px;
+            text-align: center;
+            color: $color-text-light2;
+            border-radius: 50%;
+            transition: all 0.5s;
+            margin-bottom: 87px;
+            
+            &:hover {
+                background: $color-one;
+                color: $color-text-light;  
+            }
+        }
+        
+        h3 {
+            margin: 0 auto;
+            font-size: 30px;
+        }
+        p {
+            color: $color-text-light2;
+            margin: 46px auto 0 auto;
+            font-size: 18px;
+        }
+    }
+}
+
+/*---------- Photo ----------*/
+
+.photo {
+    margin-top: 108px;
+    height: 703px;
+    background: $color-three;
+    
+    .photo1 {
+        background-image: url('https://assets.stickpng.com/images/580b57fbd9996e24bc43bfe9.png');
+        background-position: center center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        filter: drop-shadow(10px 10px 15px #7c7c7c);
+    }
+    
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-text-light2;
+        margin: 72px 0;
+    }
+    .photo-text {
+        
+    }
+}
+
+
