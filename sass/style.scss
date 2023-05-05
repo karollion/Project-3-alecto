@@ -41,6 +41,10 @@ body {
     align-items: center;
 }
 
+.center-h {
+    justify-content: center;
+}
+
 .row {
     width: 100%;
     height: 100%;
@@ -71,6 +75,29 @@ a {
     margin: 110px auto 0 auto;
 }
 
+.container>h2 {
+    position: relative;
+    margin-bottom: 40px;
+    
+    &:after {
+        position: absolute;
+        content: '';
+        bottom: -10px;
+        left: 50%;
+        width: 30px;
+        height: 1px;
+        transform: translateX(-50%);
+        background: $color-one;
+    }
+}
+
+.container>p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 auto 150px auto;
+    color: $color-text-light2;
+}
+
 .btn {
     font-weight: 600;
     color: $color-text-light;
@@ -89,7 +116,7 @@ a {
     margin: 0 auto;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 
 header {
     width: 100%;
@@ -193,28 +220,7 @@ header {
 /*---------- About ----------*/
 
 .about {
-    h2 {
-        position: relative;
-        margin-bottom: 40px;
-        
-        &:after {
-            position: absolute;
-            content: '';
-            bottom: -10px;
-            left: 50%;
-            width: 30px;
-            height: 1px;
-            transform: translateX(-50%);
-            background: $color-one;
-        }
-    }
-    
-    .container>p {
-        font-size: 18px;
-        font-weight: 400;
-        margin: 0 auto 150px auto;
-        color: $color-text-light2;
-    }
+    margin-bottom: 108px;
     
     .card {
         display: flex;
@@ -261,34 +267,138 @@ header {
 /*---------- Photo ----------*/
 
 .photo {
-    margin-top: 108px;
     height: 703px;
     background: $color-three;
-    
-    .photo1 {
-        background-image: url('https://assets.stickpng.com/images/580b57fbd9996e24bc43bfe9.png');
-        background-position: center center;
-        background-size: 60%;
-        background-repeat: no-repeat;
-        filter: drop-shadow(10px 10px 15px #7c7c7c);
-    }
-    
+
     p {
         font-size: 18px;
         font-weight: 400;
         color: $color-text-light2;
         margin: 72px 0;
     }
-    .photo-text {
-        
+
+    .photo1 {
+        background: url("../images/camera.png") no-repeat;
+        background-position: center center;
+        background-size: 60%;
+        filter: drop-shadow(10px 10px 15px #7c7c7c);
+    }
+
+    .photo2 {
+        background: url("../images/computer.png") no-repeat;
+        background-position: center center;
+        background-size: 125%;
     }
 }
 
+
+#photo2 {
+    background: $color-text-light;
+}
+
+.ceo {
+    background: url('../images/ceo.png');
+    background-position: center center;
+    background-size: cover;
+    height: 703px;
+
+    .photo3 {
+    background: url('../images/adam.png');
+    background-position: center center;
+    width: 104px;
+    height: 104px;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 30px;
+        color: $color-text-light;
+        span {
+            color: $color-one;
+        }
+    }
+
+    p {
+        color: $color-text-light2;
+        font-size: 18px;
+        margin: 0;
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+/* ---------- our services ---------- */
+
+.services {
+    background: $color-three;
+    padding-bottom: 40px;
+
+    .service-icon {
+        flex: 0 0 20%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .service-text {
+        flex: 0 0 80%;
+        margin: 0 0 90px 0;
+        padding: 0 50px 0 0;
+    }
+
+    .row h2 {
+        margin: 0;
+        font-size: 60px;  
+        color: $color-two;
+        font-weight: 200;
+    }
+
+    a {
+        font-size: 0;
+    }
+
+    i {
+        font-size: 31px;
+        margin: 0;
+        padding: 0;
+        background: $color-text-light;
+        width: 94px;
+        height: 94px;
+        line-height: 94px;
+        text-align: center;
+        color: $color-one;
+        border-radius: 50%;
+        transition: all 0.5s;
+        
+        &:hover {
+            background: $color-one;
+            color: $color-text-light;  
+        }
+    }
+}
+
+/* ---------- Meet our team ---------- */
+
+.our-team {
+    margin: 0;
+    padding: 0;
+
+    .team-photo1 {
+        background: url('../images/ceo.png');
+        background-position: center center;
+        background-size: cover;
+        height: 400px;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 @media (max-width: 700px) {
 
     .navigation {
         position: relative;
+
         .menu {
             overflow: hidden;
             position: absolute;
