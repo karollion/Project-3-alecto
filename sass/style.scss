@@ -383,14 +383,24 @@ header {
     margin: 0;
     padding: 0;
 
-    .team-photo1 {
-        background: url('../images/ceo.png');
+    .team-photo {
+        flex: 0 0 20%;
         background-position: center center;
         background-size: cover;
         height: 400px;
-        width: 400px;
+        width: 100%;
         margin: 0;
         padding: 0;
+    }
+
+    .photo4 {
+        background: url('../images/team1.png');
+    }
+    .photo5 {
+        background: url('../images/team2.png');
+    }
+    .photo6 {
+        background: url('../images/team3.png');
     }
 }
 
