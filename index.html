@@ -12,42 +12,50 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 </head>
 <body>
-    <head>
-        <div class="container">
-            <nav class="navigation">
-                <a href="#" class="logo">Alecto<span>.</span></a>
-                <ul>
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-                    <li>
-                        <a href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="#">work</a>
-                    </li>
-                    <li>
-                        <a href="#">services</a>
-                    </li>
-                    <li>
-                        <a href="#">blog</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div class="header-inner">
-                <h1><span>Alecto</span> is simple PSD Template</h1>
-                <h2>Suspendisse eget magna gravida tellus consequat</h2>
-                <a href="#" class="btn">Learn more</a>
+    <header>
+        <div class="darker">
+            <div class="container center">
+                <nav class="navigation">
+                    <a href="#" class="logo">Alecto<span>.</span></a>
+                    
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                    </label>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="#">home</a>
+                        </li>
+                        <li>
+                            <a href="#">about</a>
+                        </li>
+                        <li>
+                            <a href="#">work</a>
+                        </li>
+                        <li>
+                            <a href="#">services</a>
+                        </li>
+                        <li>
+                            <a href="#">blog</a>
+                        </li>
+                        <li>
+                            <a href="#" id="magnifying-glass"><i class="fa-solid fa-magnifying-glass"></i>search</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-inner">
+                    <h1><span>Alecto</span> is simple PSD Template</h1>
+                    <h2>Suspendisse eget magna gravida tellus consequat</h2>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
             </div>
         </div>
-    </head>
+    </header>
 
     <section class="about">
-        <div class="container cont-col-center">
+        <div class="container center">
             <h2 class="section-title">About us</h2>
             <p>Nam posuere rutrum ante, nec blandit sapien sollicitudin sed.</p>
             <div class="row">
@@ -75,7 +83,7 @@
             <a href="#" class="btn btn-two">Learn more</a>
         </div>
     </section>
-    
+
     <section class="photo">
         <div class="container">
             <div class="row">
@@ -89,6 +97,6 @@
             </div>
         </div>
     </section>
-    
+
 </body>
 </html>
