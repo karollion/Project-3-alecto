@@ -107,13 +107,28 @@ a {
     text-align: center;
     cursor: pointer;
     border-radius: 22px;
-    border-width: 2px;
-    border-style: solid;
+    border: 2px solid $color-text-light;
+}
+
+.btn-one {
+    background: none;
+    border-color: $color-text-light;
+
+    &:hover {
+        background: $color-one;
+        border-color: $color-one;
+    }
 }
 
 .btn-two {
-    background: #17daa3;
+    background: $color-one;
+    border-color: $color-one;
     margin: 0 auto;
+
+    &:hover {
+        background: none;
+        color: $color-one;
+    }
 }
 
 /* ---------- Header ---------- */
@@ -276,19 +291,6 @@ header {
         color: $color-text-light2;
         margin: 72px 0;
     }
-
-    .photo1 {
-        background: url("../images/camera.png") no-repeat;
-        background-position: center center;
-        background-size: 60%;
-        filter: drop-shadow(10px 10px 15px #7c7c7c);
-    }
-
-    .photo2 {
-        background: url("../images/computer.png") no-repeat;
-        background-position: center center;
-        background-size: 125%;
-    }
 }
 
 
@@ -328,10 +330,24 @@ header {
     }
 }
 
+.photo1 {
+    background: url("../images/camera.png") no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    filter: drop-shadow(10px 10px 15px #7c7c7c);
+}
+
+.photo2 {
+    background: url("../images/computer.png") no-repeat;
+    background-position: center center;
+    background-size: 125%;
+}
+
 /* ---------- our services ---------- */
 
 .services {
     background: $color-three;
+    margin: 0;
     padding-bottom: 40px;
 
     .service-icon {
@@ -403,6 +419,175 @@ header {
         background: url('../images/team3.png');
     }
 }
+
+/* ---------- Pricing ---------- */
+
+.pricing {
+    background: $color-three;
+    margin: 0;
+    padding: 0 0 81px 0;
+}
+
+.box {
+    flex: 1;
+    background: $color-text-light;
+    border-radius: 5px;
+    width: 344px;
+    margin: 0 15px 30px 15px;
+    padding: 0;
+
+    .box-header {
+        height: 213px;
+        margin: 0;
+        padding: 0 34px;
+        border-bottom: 2px solid $color-three;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p:first-child {
+            font-size: 60px;
+            font-weight: 200;
+            color: $color-one;
+            margin: 0;
+        }
+        p:last-child {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 200;
+            color: $color-text-light2;
+        }
+    }
+
+    .box-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0 34px;
+        height: 300px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-text-light2;
+    }
+
+    .box-footer {
+        margin: 0;
+        padding: 0 34px;
+        height: 73px;
+        width: 100%;
+        background: $color-one;
+        color: $color-text-light;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 0  0 5px 5px;
+
+        &:hover {
+            background: $color-text-light;
+            color: $color-one;
+        }
+    }
+}
+
+/* ---------- Map ---------- */
+.map {
+    background: url("../images/Map.png") no-repeat;
+    background-position: 100% center;
+
+    .photo-text {
+        padding-right: 25px;
+    }
+}
+
+/* ---------- Template ---------- */
+
+.template {
+    background: url('../images/template.png');
+    background-position: center center;
+    background-size: cover;
+    height: 703px;
+
+    h1 {
+        font-weight: 100;
+        font-size: 60px;
+        color: $color-text-light;
+        span {
+            font-weight: 700;
+        }
+    }
+
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    height: 757px;
+    background: url("../images/logo-big.png") no-repeat;
+    background-position: center top;
+}
+
+.footer {
+    background: none;
+    width: 100%;
+    padding-top: 54px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-photo {
+        height: 26px;
+        background: url("../images/logo-small.png") no-repeat;
+        background-position: left top;
+
+        a {
+            margin-left: 50px;
+        }
+    }
+
+    a {
+        color: $color-text-light2;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        li {
+            font-weight: 600;
+            overflow: hidden;
+            width: 75px;
+            text-align: center;
+        }
+
+        a {
+            font-weight: 400;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+    
+}
+
+/* ---------- Media ---------- */
 
 @media (max-width: 700px) {
 
