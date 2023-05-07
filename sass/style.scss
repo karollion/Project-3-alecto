@@ -11,7 +11,7 @@ $color-text-light: #ffffff;
 $color-text-light2: #87949e;
 $color-text-dark: #2c2c54;
 
-$transition: all 1s;
+$transition: all 0.5s;
 
 /*---------- Global ----------*/
 
@@ -113,6 +113,7 @@ a {
 .btn-one {
     background: none;
     border-color: $color-text-light;
+    transition: $transition;
 
     &:hover {
         background: $color-one;
@@ -124,6 +125,7 @@ a {
     background: $color-one;
     border-color: $color-one;
     margin: 0 auto;
+    transition: $transition;
 
     &:hover {
         background: none;
@@ -202,6 +204,14 @@ header {
             text-transform: uppercase;
             overflow: hidden;
         }
+
+        a {
+            color: $color-text-light;
+            transition: $transition;            
+            &:hover {
+                color: $color-one;
+            }
+        }
     }
 }
 
@@ -237,6 +247,7 @@ header {
 .about {
     margin-bottom: 108px;
     
+    
     .card {
         display: flex;
         flex-direction: column;
@@ -258,7 +269,7 @@ header {
             text-align: center;
             color: $color-text-light2;
             border-radius: 50%;
-            transition: all 0.5s;
+            transition: $transition;
             margin-bottom: 87px;
             
             &:hover {
@@ -282,7 +293,6 @@ header {
 /*---------- Photo ----------*/
 
 .photo {
-    height: 703px;
     background: $color-three;
 
     p {
@@ -290,6 +300,10 @@ header {
         font-weight: 400;
         color: $color-text-light2;
         margin: 72px 0;
+    }
+
+    .photo-text {
+        height: 703px;
     }
 }
 
@@ -335,12 +349,16 @@ header {
     background-position: center center;
     background-size: 60%;
     filter: drop-shadow(10px 10px 15px #7c7c7c);
+    height: 703px;
+    width: 100%;
 }
 
 .photo2 {
     background: url("../images/computer.png") no-repeat;
     background-position: center center;
     background-size: 125%;
+    height: 500px;
+    width: 100%;
 }
 
 /* ---------- our services ---------- */
@@ -384,7 +402,7 @@ header {
         text-align: center;
         color: $color-one;
         border-radius: 50%;
-        transition: all 0.5s;
+        transition: $transition;
         
         &:hover {
             background: $color-one;
@@ -407,16 +425,45 @@ header {
         width: 100%;
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+
+        p {
+            font-size: 0;
+            color: $color-text-light;
+            font-weight: 300;
+        }
+
+        &:hover p {
+            font-size: 36px;
+        }
     }
 
     .photo4 {
-        background: url('../images/team1.png');
+        background: url('../images/team1.png') no-repeat;
+        transition: $transition;
+
+        &:hover {
+            background: $color-one;
+        }
     }
     .photo5 {
-        background: url('../images/team2.png');
+        background: url('../images/team2.png') no-repeat;
+        transition: $transition;
+
+        &:hover {
+            background: $color-one;
+        }
     }
     .photo6 {
-        background: url('../images/team3.png');
+        background: url('../images/team3.png') no-repeat;
+        transition: $transition;
+
+        &:hover {
+            background: $color-one;
+        }
     }
 }
 
@@ -486,6 +533,7 @@ header {
         text-transform: uppercase;
         font-weight: 600;
         border-radius: 0  0 5px 5px;
+        transition: $transition;
 
         &:hover {
             background: $color-text-light;
@@ -497,7 +545,7 @@ header {
 /* ---------- Map ---------- */
 .map {
     background: url("../images/Map.png") no-repeat;
-    background-position: 100% center;
+    background-position: right center;
 
     .photo-text {
         padding-right: 25px;
@@ -578,6 +626,7 @@ footer {
 
         a {
             font-weight: 400;
+            transition: $transition;
 
             &:hover {
                 font-weight: 700;
@@ -622,4 +671,76 @@ footer {
             height: 300px;
         }
     }
+
+    .template h1 {
+        font-size: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .header-inner {
+        h1 {
+            font-size: 35px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }
+
+    .service-text {
+        text-align: center;
+    }
+
+    .footer {
+        position: relative;
+
+        .footer-menu {
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            flex-direction: column;
+            justify-content: center;
+
+            ul {
+                flex-direction: column;
+            }
+
+            li {
+                text-align: end;
+            }
+        }
+    }
+
+    .our-team  .team-photo{
+        flex: none;
+        width: 400px;
+    }
+
+    .col-6 {
+        flex: none;
+    }
+    
+    // .photo {
+    //     .photo-text {
+    //         padding: 0 0 50px 0;
+    //         h2 {
+    //             margin: 0;
+    //         }
+    //     }
+    // }
+
+    // #photo2 {
+    //     .photo-text {
+            
+    //     }
+    //     .photo2{
+    //         height: 500px;
+    //         width: 100%;
+    //     }
+    // }
   }
