@@ -96,6 +96,7 @@ a {
     font-weight: 400;
     margin: 0 auto 150px auto;
     color: $color-text-light2;
+    text-align: center;
 }
 
 .btn {
@@ -292,7 +293,7 @@ header {
 
 /*---------- Photo ----------*/
 
-.photo {
+.photo-section1 {
     background: $color-three;
 
     p {
@@ -308,8 +309,38 @@ header {
 }
 
 
-#photo2 {
+.photo-section2 {
     background: $color-text-light;
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-text-light2;
+        margin: 72px 0;
+    }
+
+    .photo-text {
+        height: 703px;
+    }
+}
+
+
+
+.photo1 {
+    background: url("../images/camera.png") no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    filter: drop-shadow(10px 10px 15px #7c7c7c);
+    height: 703px;
+    width: 100%;
+}
+
+.photo2 {
+    background: url("../images/computer.png") no-repeat;
+    background-position: center center;
+    background-size: 125%;
+    height: 703px;
+    width: 100%;
 }
 
 .ceo {
@@ -326,6 +357,7 @@ header {
     }
 
     h2 {
+        text-align: center;
         font-weight: 300;
         font-size: 30px;
         color: $color-text-light;
@@ -342,23 +374,6 @@ header {
             font-weight: 600;
         }
     }
-}
-
-.photo1 {
-    background: url("../images/camera.png") no-repeat;
-    background-position: center center;
-    background-size: 60%;
-    filter: drop-shadow(10px 10px 15px #7c7c7c);
-    height: 703px;
-    width: 100%;
-}
-
-.photo2 {
-    background: url("../images/computer.png") no-repeat;
-    background-position: center center;
-    background-size: 125%;
-    height: 500px;
-    width: 100%;
 }
 
 /* ---------- our services ---------- */
@@ -543,12 +558,27 @@ header {
 }
 
 /* ---------- Map ---------- */
+
 .map {
-    background: url("../images/Map.png") no-repeat;
-    background-position: right center;
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-text-light2;
+        margin: 72px 0;
+    }
 
     .photo-text {
-        padding-right: 25px;
+        height: 703px;
+    }
+
+    .world-map {
+        background: url("../images/Map.png") no-repeat;
+        background-position: right center;
+        background-size: 100%;
+        height: 703px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -561,6 +591,7 @@ header {
     height: 703px;
 
     h1 {
+        text-align: center;
         font-weight: 100;
         font-size: 60px;
         color: $color-text-light;
@@ -682,8 +713,11 @@ footer {
         justify-content: center;
     }
     
-
+    .section-title {
+        font-size: 30px;
+    }
     .header-inner {
+        text-align: center;
         h1 {
             font-size: 35px;
         }
@@ -692,7 +726,8 @@ footer {
         }
     }
 
-    .service-text {
+    .services .service-text {
+        padding: 0;
         text-align: center;
     }
 
@@ -724,9 +759,47 @@ footer {
     .col-6 {
         flex: none;
     }
-    
+
+    .photo1 {
+        height: 400px;
+    }
+
+    .map {
+        .photo-text {
+            text-align: center;
+            height: auto;
+        }
+        .world-map {
+            height: 450px;
+        }
+    }
+
+    .photo-section1 {
+
+        .photo-text {
+            text-align: center;
+            height: auto;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .photo-section2 {
+
+        .photo-text {
+            text-align: center;
+            height: auto;
+        }
+    }
+
+    .photo2 {
+        height: 500px;
+    }
     // .photo {
-    //     .photo-text {
+    //     
     //         padding: 0 0 50px 0;
     //         h2 {
     //             margin: 0;
